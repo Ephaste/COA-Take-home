@@ -1,0 +1,81 @@
+* {
+    /* box-sizing: border-box; */
+}
+
+html, body {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: black;
+    height: 550px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapper {
+    text-align: center;
+    margin: 0px 20px 0px 20px;
+    height: auto;
+    
+   
+}
+
+.parent {
+    float: left;
+    height: 550px;
+    overflow: hidden;
+    position: relative;
+    padding: 0;
+}
+
+.child {
+    height: 100%;
+    width: 100px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border: solid black 2px;
+}
+
+.child::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    transition: all 1.1s;
+    
+}
+
+.bg-one::before {
+    background-image: url(https://i.pinimg.com/originals/e2/fb/ec/e2fbec563ad7582cd0228dfe3c4bf78f.jpg);
+}
+
+.bg-two::before {
+    background-image: url(https://a-z-animals.com/media/2022/08/humpback-2048x1365.jpg);
+}
+
+.bg-three::before {
+    background-image: url(https://www.sa-venues.com/wildlife/graphics/chacmababoon/5b.jpg);
+}
+
+.bg-four::before {
+    background-image: url(https://www.thestatesman.com/wp-content/uploads/2020/05/deer.jpg);
+}
+.parent:hover .child::before {
+    filter: blur(5px) brightness(0.2);
+    transform: scale(1.1);
+}
+
+
+@media screen and (max-width: 600px) {
+    .parent {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
