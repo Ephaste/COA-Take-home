@@ -10,5 +10,5 @@ The are also two java script challenges as they are given
  2.Challenges:
    You have to dowload the codes and then run "node filename.js" in your vscode with the node installed of the updated version.
    in our example it is "node arrayManipulation.js"
-   and "node stringTransform.js"
+   and "node stringTransform.js" respectively
    You may also run in browser or run by using online compilers like onecomplirer
